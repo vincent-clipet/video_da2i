@@ -1,0 +1,5 @@
+* Cadres de texte
+* Animations 'statiques'
+* Musique
+* Parallaxe
+* Fondu
