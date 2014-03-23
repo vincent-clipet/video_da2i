@@ -8,6 +8,11 @@ function Part2()
 	this.fadeIn = new FadeIn(2250, 20);
 	this.fadeOut = new FadeOut(4400, 30, 20);
 	
+	this.slides = [
+		new Slide(2350, 2370, 800),
+		new Slide(2450, 2470, 800)
+	];
+	
 	
 	
 	//
@@ -25,7 +30,15 @@ function Part2()
 	//
 	this.update = function()
 	{
-		scrollX -= speed * 3;
+		//scrollX -= speed * 3;
+		
+		for (key in this.slides)
+		{
+			this.slides[key].update();
+			
+			if (this.slides[key].isInProgress())
+				scrollX -= this.slides[key].speed;
+		}
 		
 		this.fadeOut.update();
 		this.fadeIn.update();

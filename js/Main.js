@@ -9,7 +9,7 @@ window.onload = function()
 {
 	currentPart = new Part1();
 	currentPart.init();
-	interval = setInterval(update, 2); // DEBUG
+	interval = setInterval(update, 1); // DEBUG
 	pause = false;
 };
 
@@ -76,6 +76,8 @@ var update = function()
 		draw();
 	}
 }
+
+
 
 //
 // Draw
