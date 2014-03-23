@@ -24,7 +24,8 @@ function Part1()
 		new Anim(1650, 1800, 1.4)
 	];
 	this.tree = new SchoolTree(880, 0, 0, "images/tree.png", this.anims);
-	this.nextFade = new FadeOut(2200, 30, 20);
+	this.fadeIn = new FadeIn(1, 20);
+	this.fadeOut = new FadeOut(2200, 30, 20);
 	
 	
 	
@@ -52,9 +53,10 @@ function Part1()
 		this.tree.move(speed, 0);
 		this.tree.update();
 
-		this.nextFade.update();
+		this.fadeIn.update();
+		this.fadeOut.update();
 		
-		if (this.nextFade.mustChangePart())
+		if (this.fadeOut.mustChangePart())
 			nextPart(interval, new Part2());
 	}
 
@@ -70,7 +72,8 @@ function Part1()
 		this.tree.draw();
 		this.boy.draw();
 		this.girl.draw();
-		this.nextFade.draw(scrollX);
+		this.fadeIn.draw(scrollX);
+		this.fadeOut.draw(scrollX);
 	}
 	
 }

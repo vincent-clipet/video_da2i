@@ -5,7 +5,8 @@ function Part2()
 	// Vars
 	//
 	this.bg2 = new Background("images/background2.png");
-	this.nextFade = new FadeOut(4400, 30, 20);
+	this.fadeIn = new FadeIn(2250, 20);
+	this.fadeOut = new FadeOut(4400, 30, 20);
 	
 	
 	
@@ -26,9 +27,10 @@ function Part2()
 	{
 		scrollX -= speed * 3;
 		
-		this.nextFade.update();
+		this.fadeOut.update();
+		this.fadeIn.update();
 		
-		if (this.nextFade.mustChangePart())
+		if (this.fadeOut.mustChangePart())
 			nextPart(interval, new Part3());
 	}
 
@@ -41,7 +43,8 @@ function Part2()
 	{
 		ctx.translate(scrollX, scrollY);
 		this.bg2.draw(scrollX, scrollY);
-		this.nextFade.draw(scrollX);
+		this.fadeIn.draw(scrollX);
+		this.fadeOut.draw(scrollX);
 	}
 	
 }

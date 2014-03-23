@@ -2,4 +2,4 @@
 * Animations 'statiques'
 * Musique
 * Parallaxe
-* Fondu
+* Chargement des images
