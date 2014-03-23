@@ -1,10 +1,10 @@
-function Slide(start, end, endOffset)
+function Slide(start, duration, endOffset)
 {
 	this.start = start;
-	this.end = end;
+	this.end = start + duration;
 	this.endOffset = endOffset;
 	
-	this.totalDuration = this.end - this.start;
+	this.totalDuration = duration;
 	this.accelFrames = this.totalDuration * 2.5 / 10.0;
 	this.endAcceleration = this.start + this.accelFrames;
 	this.startDeceleration = this.end - this.accelFrames;

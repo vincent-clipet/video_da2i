@@ -46,11 +46,9 @@ function Part1()
 	{
 		scrollX -= speed;
 		
-		this.boy.move(speed, 0);
+		this.bg1.move(-speed, 0);
 		this.boy.update();
-		this.girl.move(speed, 0);
 		this.girl.update();
-		this.tree.move(speed, 0);
 		this.tree.update();
 
 		this.fadeIn.update();
@@ -67,7 +65,6 @@ function Part1()
 	//
 	this.draw = function()
 	{
-		ctx.translate(scrollX, scrollY);
 		this.bg1.draw(scrollX, scrollY);
 		this.tree.draw();
 		this.boy.draw();

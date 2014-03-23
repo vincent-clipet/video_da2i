@@ -8,7 +8,9 @@ function FadeIn(start, timeFadeIn)
 
 	this.update = function()
 	{
-		if (this.isInProgress())
+		if (frame == this.end - 1) // Time stopped
+			this.val = 0.0;
+		else if (this.isInProgress())
 			this.val -= this.interval;
 	}
 
@@ -17,7 +19,7 @@ function FadeIn(start, timeFadeIn)
 		if (this.isInProgress())
 		{
 			ctx.fillStyle = "rgba(0,0,0," + this.val + ")";
-			ctx.fillRect(-scrollX, 0, 1280, 640);
+			ctx.fillRect(0, 0, 1280, 640);
 		}
 	}
 

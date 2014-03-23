@@ -3,3 +3,6 @@
 * Musique
 * Parallaxe
 * Chargement des images
+* Part 3
+* Part 4
+* OLPC dans Part 2

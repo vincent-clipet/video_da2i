@@ -24,7 +24,7 @@ function FadeOut(start, timeFadeOut, timeStopped)
 		if (this.isInProgress())
 		{
 			ctx.fillStyle = "rgba(0,0,0," + this.val + ")";
-			ctx.fillRect(-scrollX, 0, 1280, 640);
+			ctx.fillRect(0, 0, 1280, 640);
 		}
 	}
 	

@@ -25,7 +25,7 @@ var scrollY = null;
 var speed = 0.5;
 var frameInterval = 50;
 var interval = null;
-var fullspeedFrame = 2180;// DEBUG
+var fullspeedFrame = 2180; //2180;// DEBUG
 var currentPart = null;
 
 
