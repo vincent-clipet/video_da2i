@@ -5,17 +5,6 @@ var canvas = document.getElementById("da2i");
 canvas.focus();
 var ctx = canvas.getContext("2d");
 
-var part1 = null;
-
-window.onload = function()
-{
-	currentPart = new Part1();
-	part1 = currentPart;
-	currentPart.init();
-	interval = setInterval(update, 1); // DEBUG
-	pause = false;
-};
-
 
 
 //
@@ -26,10 +15,43 @@ var frame = 0;
 var scrollX = null;
 var scrollY = null;
 var speed = 0.5;
-var frameInterval = 20; // Change speed here
+var frameInterval = 2; // Change speed here
 var interval = null;
 var fullspeedFrame = 1;//4380; //3320; //2180;// DEBUG
 var currentPart = null;
+var part1 = null;
+
+var imagesUrl = [
+	"images/background.png",
+	"images/background2.png",
+	"images/background3.png",
+	"images/background4.png",
+	"images/spritesBoy.png",
+	"images/spritesGirl.png",
+	"images/tree.png",
+];
+var count = imagesUrl.length;
+var imagesList = new Array()
+
+for (img in imagesUrl)
+{
+	var url = imagesUrl[img];
+	imagesList[url] = new Image();
+	imagesList[url].src = url;
+	imagesList[url].onload = function()
+	{
+		count--;
+		
+		if (count == 0)
+		{
+			currentPart = new Part1();
+			part1 = currentPart;
+			currentPart.init();
+			interval = setInterval(update, 1); // DEBUG
+			pause = false;
+		}
+	}
+}
 
 
 

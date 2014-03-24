@@ -2,8 +2,7 @@ function Background(imageName)
 {
 	this.x = 0;
 	this.y = 0;
-	this.image = new Image();
-	this.image.src = imageName;
+	this.image = imagesList[imageName];
 
 	this.move = function (dx, dy)
 	{

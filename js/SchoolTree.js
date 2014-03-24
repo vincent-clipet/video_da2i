@@ -3,8 +3,7 @@ function SchoolTree(x, y, sy, imageName, anims)
 	this.x = x;
 	this.y = y;
 	this.sy = sy;
-	this.image = new Image();
-	this.image.src = imageName;
+	this.image = imagesList[imageName];
 	this.anims = anims;
 
 	this.scroll = function (dy)

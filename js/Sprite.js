@@ -2,8 +2,7 @@ function Sprite(x, y, imageName, cropCoord, currSprite)
 {
 	this.x = x;
 	this.y = y;
-	this.image = new Image();
-	this.image.src = imageName;
+	this.image = imagesList[imageName];
 	this.cropCoord = cropCoord;
 	this.currSprite = currSprite;
 

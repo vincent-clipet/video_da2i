@@ -18,19 +18,7 @@ function Slide(start, duration, endOffset)
 	this.update = function()
 	{
 		if (this.isInProgress())
-		{
-			console.log(this);
-			console.log(scrollX);
-		
-			/*if (frame == this.endAcceleration)
-				this.accel = 0;*/
-				
-			/*if (frame == this.end)
-			{
-				this.accel = 0;
-				this.speed = 0;
-			}*/
-			
+		{	
 			if (this.speed > this.maxSpeed)
 				this.speed = this.maxSpeed;
 				
