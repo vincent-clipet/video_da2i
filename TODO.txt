@@ -1,8 +1,7 @@
-* Cadres de texte
-* Animations 'statiques'
-* Musique
-* Parallaxe
-* Chargement des images
-* Part 3
-* Part 4
-* OLPC dans Part 2
+* Apparition de cadres de texte pendant le scrolling, contenant les infos sur la formation (surtout dans les parties 1 et 3)
+* Animations 'statiques' & parallaxe pour donner un peu + de vie aux décors
+* Intégration de la musique
+* Attendre le chargement complet des images avant le lancement de l'animation
+* Image OLPC dans la partie 2
+* Image Entreprises à rallonger dans la partie 3
+* Image Crédits & Liens à faire

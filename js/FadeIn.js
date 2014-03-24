@@ -28,4 +28,9 @@ function FadeIn(start, timeFadeIn)
 		return (frame >= this.start && frame < this.end);
 	}
 	
+	this.hasEnded = function()
+	{
+		return frame > this.end;
+	}
+	
 };

@@ -4,13 +4,13 @@ function Part1()
 	//
 	// Vars
 	//
-	this.boy = new Sprite(210, canvas.height - 19 - 87, "images/spritesBoy.png", [
+	this.boy = new Sprite(210, 534, "images/spritesBoy.png", [
 		[0, 0, 43, 88],
 		[43, 0, 43, 87],
 		[86, 0, 43, 88],
 		[129, 0, 43, 87]
 	], 0);
-	this.girl = new Sprite(260, canvas.height - 19 - 81, "images/spritesGirl.png", [
+	this.girl = new Sprite(260, 540, "images/spritesGirl.png", [
 		[0, 0, 39, 81],
 		[39, 0, 40, 81],
 		[79, 0, 39, 81],

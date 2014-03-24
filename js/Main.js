@@ -5,9 +5,12 @@ var canvas = document.getElementById("da2i");
 canvas.focus();
 var ctx = canvas.getContext("2d");
 
+var part1 = null;
+
 window.onload = function()
 {
 	currentPart = new Part1();
+	part1 = currentPart;
 	currentPart.init();
 	interval = setInterval(update, 1); // DEBUG
 	pause = false;
@@ -23,9 +26,9 @@ var frame = 0;
 var scrollX = null;
 var scrollY = null;
 var speed = 0.5;
-var frameInterval = 50;
+var frameInterval = 20; // Change speed here
 var interval = null;
-var fullspeedFrame = 2180; //2180;// DEBUG
+var fullspeedFrame = 1;//4380; //3320; //2180;// DEBUG
 var currentPart = null;
 
 
@@ -42,8 +45,6 @@ canvas.addEventListener('keydown', function (e)
 
 var nextPart = function (intervalToCancel, newPart)
 {
-	console.log("new part ! " + newPart)
-	//clearInterval(intervalToCancel);
 	currentPart = newPart;
 	currentPart.init();
 	currentPart.update();
@@ -66,7 +67,6 @@ var update = function()
 		// DEBUG ========================================
 		if (frame == fullspeedFrame)
 		{
-			console.log("--------------------------------------------------");
 			clearInterval(interval);
 			interval = setInterval(update, frameInterval);
 		}

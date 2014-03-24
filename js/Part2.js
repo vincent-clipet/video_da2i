@@ -5,7 +5,7 @@ function Part2()
 	// Vars
 	//
 	this.bg2 = new Background("images/background2.png");
-	this.fadeIn = new FadeIn(2250, 20);
+	this.fadeIn = new FadeIn(2248, 20);
 	this.fadeOut = new FadeOut(3320, 30, 20);
 	
 	this.slides = [
