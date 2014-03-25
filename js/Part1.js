@@ -16,7 +16,9 @@ function Part1(textures)
 		[79, 0, 39, 81],
 		[118, 0, 38, 81]
 	], 1);
-	this.bg1 = new Background("images/background.png");
+	this.bg1 = new Background("images/background.png", [
+		new TextSign(800, 200, 0, 0, 200, 100, 1.6, "images/sign1.png")
+	]);
 	this.anims = [
 		new Anim(60, 160, 2),
 		new Anim(450, 560, 1.2),
@@ -65,7 +67,7 @@ function Part1(textures)
 	//
 	this.draw = function()
 	{
-		this.bg1.draw(scrollX, scrollY);
+		this.bg1.draw();
 		this.tree.draw();
 		this.boy.draw();
 		this.girl.draw();

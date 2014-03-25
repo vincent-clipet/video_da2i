@@ -4,6 +4,8 @@
 var canvas = document.getElementById("da2i");
 canvas.focus();
 var ctx = canvas.getContext("2d");
+ctx.textAlign = "center";
+ctx.font = "12pt Calibri";
 
 
 
@@ -29,6 +31,7 @@ var imagesUrl = [
 	"images/spritesBoy.png",
 	"images/spritesGirl.png",
 	"images/tree.png",
+	"images/sign1.png"
 ];
 var count = imagesUrl.length;
 var imagesList = new Array()
