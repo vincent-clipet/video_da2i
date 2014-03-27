@@ -27,6 +27,7 @@ function Part2()
 	{
 		scrollX = 0;
 		scrollY = 0;
+		speed = 1.0;
 	}
  
 
@@ -35,8 +36,6 @@ function Part2()
 	//
 	this.update = function()
 	{
-		//scrollX -= speed * 3;
-		
 		for (key in this.slides)
 		{
 			this.slides[key].update();
@@ -49,7 +48,7 @@ function Part2()
 		this.fadeIn.update();
 		
 		if (this.fadeOut.mustChangePart())
-			nextPart(interval, new Part3());
+			nextPart(new Part3());
 	}
 
 
@@ -59,10 +58,9 @@ function Part2()
 	//
 	this.draw = function()
 	{
-		//ctx.translate(scrollX, scrollY);
-		this.bg2.draw(scrollX, scrollY);
-		this.fadeIn.draw(scrollX);
-		this.fadeOut.draw(scrollX);
+		this.bg2.draw();
+		this.fadeIn.draw();
+		this.fadeOut.draw();
 	}
 	
 }

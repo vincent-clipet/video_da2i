@@ -4,13 +4,13 @@ function Part1(textures)
 	//
 	// Vars
 	//
-	this.boy = new Sprite(210, 534, "images/spritesBoy.png", [
+	this.boy = new Sprite(70, 534, "images/spritesBoy.png", [
 		[0, 0, 43, 88],
 		[43, 0, 43, 87],
 		[86, 0, 43, 88],
 		[129, 0, 43, 87]
 	], 0);
-	this.girl = new Sprite(260, 540, "images/spritesGirl.png", [
+	this.girl = new Sprite(120, 540, "images/spritesGirl.png", [
 		[0, 0, 39, 81],
 		[39, 0, 40, 81],
 		[79, 0, 39, 81],
@@ -46,18 +46,20 @@ function Part1(textures)
 	//
 	this.update = function()
 	{
-		scrollX -= speed;
+		scrollX -= speed / 2.0;
 		
-		this.bg1.move(-speed, 0);
+		this.bg1.move(-speed / 2.0, 0);
+		this.boy.move(speed * 0.3, 0);
+		this.girl.move(speed * 0.3, 0);
+		
 		this.boy.update();
 		this.girl.update();
 		this.tree.update();
-
 		this.fadeIn.update();
 		this.fadeOut.update();
 		
 		if (this.fadeOut.mustChangePart())
-			nextPart(interval, new Part2());
+			nextPart(new Part2());
 	}
 
 
@@ -71,8 +73,8 @@ function Part1(textures)
 		this.tree.draw();
 		this.boy.draw();
 		this.girl.draw();
-		this.fadeIn.draw(scrollX);
-		this.fadeOut.draw(scrollX);
+		this.fadeIn.draw();
+		this.fadeOut.draw();
 	}
 	
 }

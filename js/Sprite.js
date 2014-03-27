@@ -14,7 +14,7 @@ function Sprite(x, y, imageName, cropCoord, currSprite)
 
 	this.update = function ()
 	{
-		if (frame % 4 == 0)
+		if (Math.floor(frame) % 4 == 0)
 		{
 			this.currSprite++;
 

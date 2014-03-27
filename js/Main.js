@@ -12,14 +12,19 @@ var ctx = canvas.getContext("2d");
 //
 var pause = true;
 var frame = 0;
-var scrollX = null;
-var scrollY = null;
-var speed = 0.5;
-var frameInterval = 50; // Change speed here
+var initSpeed = 1.5;
+var speed = initSpeed;
+var realFrame = 0;
+var frameInterval = 50;
 var interval = null;
-var fullspeedFrame = 1;//4380; //3320; //2180;// DEBUG
+
 var currentPart = null;
 var part1 = null;
+var scrollX = null;
+var scrollY = null;
+
+var fullspeedFrame = 3320;//4380; //3320; //2180;// DEBUG
+var fullspeed = false;
 
 var imagesUrl = [
 	"images/background.png",
@@ -48,7 +53,15 @@ for (img in imagesUrl)
 			currentPart = new Part1();
 			part1 = currentPart;
 			currentPart.init();
-			interval = setInterval(update, 1); // DEBUG
+			
+			if (fullspeedFrame == null)
+				interval = setInterval(update, frameInterval);
+			else
+			{
+				interval = setInterval(update, 1);
+				fullspeed = true;
+			}
+				
 			pause = false;
 		}
 	}
@@ -66,7 +79,7 @@ canvas.addEventListener('keydown', function (e)
 	draw();
 }, false);
 
-var nextPart = function (intervalToCancel, newPart)
+var nextPart = function (newPart)
 {
 	currentPart = newPart;
 	currentPart.init();
@@ -82,16 +95,21 @@ var update = function()
 {
 	if (! pause)
 	{
-		frame++;
+		realFrame++;
+		frame += speed;
 		
 		if (frame % 20 == 0) // DEBUG
+		{
+			console.log("realFrame = " + realFrame);
 			console.log("frame = " + frame);
+		}
 		
 		// DEBUG ========================================
-		if (frame == fullspeedFrame)
+		if (frame >= fullspeedFrame && fullspeed)
 		{
 			clearInterval(interval);
 			interval = setInterval(update, frameInterval);
+			fullspeed = false;
 		}
 		// ==============================================
 		

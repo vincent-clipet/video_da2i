@@ -19,7 +19,7 @@ function FadeOut(start, timeFadeOut, timeStopped)
 		}
 	}
 
-	this.draw = function (scrollX)
+	this.draw = function ()
 	{
 		if (this.isInProgress())
 		{
@@ -30,7 +30,7 @@ function FadeOut(start, timeFadeOut, timeStopped)
 	
 	this.mustChangePart = function()
 	{
-		return (frame == this.frameNextFunction);
+		return (frame >= this.frameNextFunction);
 	}
 
 	this.isInProgress = function ()

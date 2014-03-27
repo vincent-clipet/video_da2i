@@ -1,14 +1,14 @@
-function Anim(start, end, speed)
+function Anim(start, end, speedAnim)
 {
 	this.start = start;
 	this.end = end;
-	this.speed = speed;
+	this.speed = speedAnim;
 	this.val = 0.0;
 
 	this.update = function ()
 	{
 		if (this.isInProgress())
-			this.val += this.speed;
+			this.val += this.speed * speed;
 	}
 
 	this.isInProgress = function ()

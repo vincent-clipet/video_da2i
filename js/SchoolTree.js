@@ -25,7 +25,7 @@ function SchoolTree(x, y, sy, imageName, anims)
 			a.update();
 
 			if (a.isInProgress())
-				this.scroll(a.speed);
+				this.scroll(a.speed * speed);
 		}
 	}
 

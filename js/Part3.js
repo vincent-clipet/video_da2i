@@ -5,9 +5,9 @@ function Part3()
 	// Vars
 	//
 	this.boy = part1.boy;
-	this.boy.x = 150;
+	this.boy.x = 130;
 	this.girl = part1.girl;
-	this.girl.x = 200;
+	this.girl.x = 180;
 	this.bg3 = new Background("images/background3.png", [
 		new TextSign(800, 200, 0, 0, 200, 100, 1.6, "images/sign1.png")
 	]);
@@ -23,6 +23,7 @@ function Part3()
 	{
 		scrollX = 0;
 		scrollY = 0;
+		speed = initSpeed * 0.7;
 	}
  
 
@@ -31,17 +32,19 @@ function Part3()
 	//
 	this.update = function()
 	{
-		scrollX -= speed * 1.4;
+		scrollX -= speed / 2.0 * 1.7;
 		
-		this.bg3.move(-speed * 1.4, 0);
+		this.bg3.move(-speed / 2.0 * 1.7, 0);
+		this.boy.move(speed * 0.9, 0);
+		this.girl.move(speed * 0.9, 0);
+		
 		this.boy.update();
 		this.girl.update();
-
 		this.fadeIn.update();
 		this.fadeOut.update();
 		
 		if (this.fadeOut.mustChangePart())
-			nextPart(interval, new Part4());
+			nextPart(new Part4());
 	}
 
 
@@ -51,11 +54,11 @@ function Part3()
 	//
 	this.draw = function()
 	{
-		this.bg3.draw(scrollX, scrollY);
+		this.bg3.draw();
 		this.boy.draw();
 		this.girl.draw();
-		this.fadeIn.draw(scrollX);
-		this.fadeOut.draw(scrollX);
+		this.fadeIn.draw();
+		this.fadeOut.draw();
 	}
 	
 }

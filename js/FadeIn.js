@@ -14,7 +14,7 @@ function FadeIn(start, timeFadeIn)
 			this.val -= this.interval;
 	}
 
-	this.draw = function (scrollX)
+	this.draw = function ()
 	{
 		if (this.isInProgress())
 		{

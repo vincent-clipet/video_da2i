@@ -37,8 +37,8 @@ function Part4()
 	//
 	this.draw = function()
 	{
-		this.bg4.draw(scrollX, scrollY);
-		this.fadeIn.draw(scrollX);
+		this.bg4.draw();
+		this.fadeIn.draw();
 	}
 	
 }
