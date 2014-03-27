@@ -1,0 +1,73 @@
+@import "compass";
+@import "normalize";
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    background: #070707 url('../images/bg-page.png');
+}
+
+a {
+    color: #FFF;
+    display: inline-block;
+    padding: 0 3px;
+
+    &:hover {
+        text-decoration: none;
+        background: #FFF;
+        color: #111;
+    }
+}
+
+
+header {
+    height: 70px;
+    line-height: 70px;
+    background: #2c7a81;
+    padding: 0 30px;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        color: #EEE;
+        float: left;
+    }
+
+    .logo {
+        float: right;
+        display: block;
+        height: 70px;
+
+        img {
+            margin: 10px 0;
+            height: 50px;
+        }
+    }
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+section:not(.video) {
+    color: #CCC;
+}
+
+.not-visible {
+    height: 0;
+    width: 0;
+}
+
+canvas {
+    width: 100%;
+
+    &:focus {
+        outline: none;
+    }
+}
