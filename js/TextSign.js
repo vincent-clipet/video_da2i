@@ -1,17 +1,17 @@
-function TextSign(x, y, sx, sy, width, height, factor, imageName)
+function TextSign(x, y, sx, sy, sx2, sy2, factor, imageName)
 {
 	this.x = x;
 	this.y = y;
 	this.sx = sx;
 	this.sy = sy;
-	this.width = width;
-	this.height = height;
+	this.width = sx2 - sx;
+	this.height = sy2 - sy;
 	this.factor = factor;
 	this.image = imagesList[imageName];
 
 	this.move = function (dx, dy)
 	{
-		this.x += dx * factor * speed / 2.0;
+		this.x += dx * 2.0 * factor;
 		this.y += dy;
 	}
 	

@@ -5,7 +5,7 @@ function Part4()
 	// Vars
 	//
 	this.bg4 = new Background("images/background4.png");
-	this.fadeIn = new FadeIn(4347, 20);
+	this.fadeIn = new FadeIn(5047, 20);
 	
 	
 	

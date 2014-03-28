@@ -12,7 +12,7 @@ var ctx = canvas.getContext("2d");
 //
 var pause = true;
 var frame = 0;
-var initSpeed = 1.5;
+var initSpeed = 2.5;
 var speed = initSpeed;
 var realFrame = 0;
 var frameInterval = 50;
@@ -23,7 +23,7 @@ var part1 = null;
 var scrollX = null;
 var scrollY = null;
 
-var fullspeedFrame = 3320;//4380; //3320; //2180;// DEBUG
+var fullspeedFrame = null;//4380; //3320; //2180;// DEBUG
 var fullspeed = false;
 
 var imagesUrl = [
@@ -34,7 +34,7 @@ var imagesUrl = [
 	"images/spritesBoy.png",
 	"images/spritesGirl.png",
 	"images/tree.png",
-	"images/sign1.png"
+	"images/signs.png"
 ];
 var count = imagesUrl.length;
 var imagesList = new Array()
@@ -98,10 +98,10 @@ var update = function()
 		realFrame++;
 		frame += speed;
 		
-		if (frame % 20 == 0) // DEBUG
+		if (Math.floor(frame) % 20 == 0) // DEBUG
 		{
 			console.log("realFrame = " + realFrame);
-			console.log("frame = " + frame);
+			console.log("frame = " + Math.floor(frame));
 		}
 		
 		// DEBUG ========================================

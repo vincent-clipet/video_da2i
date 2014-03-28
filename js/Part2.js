@@ -10,12 +10,12 @@ function Part2()
 	
 	this.slides = [
 		//new Slide(2330, 20, 800),
-		new Slide(2490, 20, 800), // Sys -> GL
-		new Slide(2630, 20, 800), // GL -> Maths
-		new Slide(2750, 20, 800), // Maths -> SQL
-		new Slide(2950, 20, 800), // SQL -> Web
-		new Slide(3130, 20, 800), // Web -> OLPC
-		new Slide(3310, 60, 2400), // OLPC -> FadeOut
+		new Slide(2450, 20, 800), // Sys -> GL // 10 sec
+		new Slide(2620, 20, 800), // GL -> Maths // 9 sec
+		new Slide(2790, 20, 800), // Maths -> SQL // 10 sec
+		new Slide(2960, 20, 800), // SQL -> Web // 10 sec
+		new Slide(3130, 20, 800), // Web -> OLPC // 10 sec
+		new Slide(3310, 60, 2400), // OLPC -> FadeOut // 10 sec
 	];
 	
 	

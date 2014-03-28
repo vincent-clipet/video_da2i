@@ -17,7 +17,11 @@ function Part1(textures)
 		[118, 0, 38, 81]
 	], 1);
 	this.bg1 = new Background("images/background.png", [
-		new TextSign(800, 200, 0, 0, 200, 100, 1.6, "images/sign1.png")
+		new TextSign(800, 30, 5, 5, 412, 97, 2, "images/signs.png"),
+		new TextSign(1500, 230, 2, 104, 413, 203, 1.95, "images/signs.png"),
+		new TextSign(2200, 70, 4, 205, 464, 333, 1.9, "images/signs.png"),
+		new TextSign(2900, 150, 2, 335, 484, 465, 1.85, "images/signs.png"),
+		new TextSign(3650, 50, 4, 467, 474, 535, 1.80, "images/signs.png")
 	]);
 	this.anims = [
 		new Anim(60, 160, 2),

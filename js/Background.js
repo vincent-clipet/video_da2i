@@ -21,7 +21,8 @@ function Background(imageName, textSigns)
 		for (key in this.textSigns)
 		{
 			var sign = this.textSigns[key];
-			sign.draw(sign.image, scrollX + this.x, scrollY + this.y);
+			//sign.draw(sign.image, scrollX + this.x, scrollY + this.y);
+			sign.draw();
 		}
 	};
 };
